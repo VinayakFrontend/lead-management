@@ -15,7 +15,7 @@ const SuperAdminDashboard = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/users', {
+      const res = await axios.get('https://lead-management-psag.onrender.com/api/users', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data);
@@ -27,7 +27,7 @@ const SuperAdminDashboard = () => {
   const handleDelete = async id => {
     if (!window.confirm('Delete this user?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/users/${id}`, {
+      await axios.delete(`https://lead-management-psag.onrender.com/api/users/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchUsers();
@@ -53,7 +53,7 @@ const SuperAdminDashboard = () => {
 
   const handleViewLogs = async userId => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/users/logs/${userId}`, {
+      const res = await axios.get(`https://lead-management-psag.onrender.com/api/users/logs/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setLogs(res.data.logs);
