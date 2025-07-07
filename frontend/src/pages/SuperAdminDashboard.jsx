@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import UserForm from '../components/UserForm';
 import SidebarLayout from '../components/SidebarLayout';
-import '../css/superAdminDashboard.css';
+import '../CSS/superAdminDashboard.css';
 
 const SuperAdminDashboard = () => {
   const [users, setUsers] = useState([]);
