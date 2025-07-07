@@ -28,7 +28,7 @@ const LeadForm = ({ lead, onClose, onSubmit }) => {
     const fetchAgents = async () => {
       if (userRole !== 'support-agent') {
         try {
-          const res = await axios.get('http://localhost:5000/api/users/support-agents', {
+          const res = await axios.get('https://lead-management-psag.onrender.com/api/users/support-agents', {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
           });
           setAgents(res.data);
