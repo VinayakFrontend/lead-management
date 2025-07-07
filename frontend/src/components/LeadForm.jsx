@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../CSS/leadForm.css';
+import '../CSS/LeadForm.css';
 
 const LeadForm = ({ lead, onClose, onSubmit }) => {
   const [formData, setFormData] = useState({
