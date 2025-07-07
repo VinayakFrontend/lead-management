@@ -23,12 +23,12 @@ const UserForm = ({ user, onClose }) => {
         // Update
         const payload = { ...form };
         if (!payload.password) delete payload.password; // Don't send empty password
-        await axios.put(`http://localhost:5000/api/users/${user._id}`, payload, {
+        await axios.put(`https://lead-management-psag.onrender.com/api/users/${user._id}`, payload, {
           headers: { Authorization: `Bearer ${token}` },
         });
       } else {
         // Create
-        await axios.post(`http://localhost:5000/api/users`, form, {
+        await axios.post(`https://lead-management-psag.onrender.com/api/users`, form, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }
