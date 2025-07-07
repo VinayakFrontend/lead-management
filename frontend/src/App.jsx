@@ -30,7 +30,7 @@ function App() {
       </Route>
 
       {/* Catch-all fallback */}
-      <Route path="*" element={<Navigate to="/login" />} />
+{/*       <Route path="*" element={<Navigate to="/login" />} /> */}
       <Route path="/leads" element={<LeadDashboard />} />
       <Route path="/analytics" element={<AnalyticsDashboard />} />
     </Routes>
