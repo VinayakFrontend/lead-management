@@ -10,7 +10,7 @@ const LeadDetails = ({ leadId }) => {
 
   const fetchLead = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/leads/${leadId}`, {
+      const res = await axios.get(`https://lead-management-psag.onrender.com/api/leads/${leadId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setLead(res.data);
@@ -21,7 +21,7 @@ const LeadDetails = ({ leadId }) => {
 
   const fetchRole = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/users/me`, {
+      const res = await axios.get(`https://lead-management-psag.onrender.com/api/users/me`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUserRole(res.data.role);
@@ -38,7 +38,7 @@ const LeadDetails = ({ leadId }) => {
   const handleAddComment = async () => {
     if (!comment.trim()) return;
     try {
-      await axios.post(`http://localhost:5000/api/leads/${leadId}/comments`, { text: comment }, {
+      await axios.post(`https://lead-management-psag.onrender.com/api/leads/${leadId}/comments`, { text: comment }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setComment('');
@@ -51,7 +51,7 @@ const LeadDetails = ({ leadId }) => {
   const handleDeleteComment = async commentId => {
     if (!window.confirm('Delete this comment?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/leads/${leadId}/comments/${commentId}`, {
+      await axios.delete(`https://lead-management-psag.onrender.com/api/leads/${leadId}/comments/${commentId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchLead();
