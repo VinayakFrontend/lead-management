@@ -18,7 +18,7 @@ const Register = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/register', form);
+      await axios.post('https://lead-management-psag.onrender.com/api/auth/register', form);
       setSuccess('✅ Registration successful! Redirecting...');
       setTimeout(() => navigate('/login'), 2000);
     } catch (err) {
