@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import '../CSS/userForm.css';
+import '../CSS/UserForm.css';
 
 const UserForm = ({ user, onClose }) => {
   const [form, setForm] = useState({
