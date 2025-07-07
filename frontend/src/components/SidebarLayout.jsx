@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import '../CSS/sidebar.css';
+import '../CSS/Sidebar.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // ✅ Font Awesome
 
 const SidebarLayout = ({ children }) => {
