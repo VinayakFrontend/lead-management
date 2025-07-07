@@ -29,7 +29,7 @@ const LeadDashboard = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/users', {
+      const res = await axios.get('https://lead-management-psag.onrender.com/api/users', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUserRole(res.data.role);
@@ -43,7 +43,7 @@ const LeadDashboard = () => {
   const fetchLeads = async () => {
     if (!token) return;
     try {
-      const res = await axios.get('http://localhost:5000/api/leads', {
+      const res = await axios.get('https://lead-management-psag.onrender.com/api/leads', {
         headers: { Authorization: `Bearer ${token}` },
         params: filters
       });
@@ -55,7 +55,7 @@ const LeadDashboard = () => {
 
   const fetchAgents = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/users/support-agents', {
+      const res = await axios.get('https://lead-management-psag.onrender.com/users/support-agents', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setAgents(res.data);
@@ -67,7 +67,7 @@ const LeadDashboard = () => {
   const handleDelete = async id => {
     if (!window.confirm('Delete this lead?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/leads/${id}`, {
+      await axios.delete(`https://lead-management-psag.onrender.com/api/leads/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (selectedLeadId === id) setSelectedLeadId(null);
@@ -91,11 +91,11 @@ const LeadDashboard = () => {
   const handleFormSubmit = async data => {
     try {
       if (editingLead) {
-        await axios.put(`http://localhost:5000/api/leads/${editingLead._id}`, data, {
+        await axios.put(`https://lead-management-psag.onrender.com/api/leads/${editingLead._id}`, data, {
           headers: { Authorization: `Bearer ${token}` }
         });
       } else {
-        await axios.post('http://localhost:5000/api/leads', data, {
+        await axios.post('https://lead-management-psag.onrender.com/api/leads', data, {
           headers: { Authorization: `Bearer ${token}` }
         });
       }
@@ -109,7 +109,7 @@ const LeadDashboard = () => {
 
   const handleExport = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/leads/export', {
+      const res = await axios.get('https://lead-management-psag.onrender.com/api/leads/export', {
         headers: { Authorization: `Bearer ${token}` },
         params: filters,
         responseType: 'blob'
@@ -133,7 +133,7 @@ const LeadDashboard = () => {
     const formData = new FormData();
     formData.append('file', file);
     try {
-      await axios.post('http://localhost:5000/api/leads/import', formData, {
+      await axios.post('https://lead-management-psag.onrender.com/api/leads/import', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'
