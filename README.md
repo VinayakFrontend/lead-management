@@ -7,8 +7,8 @@ A full-featured Lead Management System built with the MERN stack (MongoDB, Expre
 
 ## 🚀 Live Demo
 
-- **Frontend (Vercel)**: [https://your-frontend.vercel.app](https://your-frontend.vercel.app)
-- **Backend (Render)**: [https://your-backend.onrender.com](https://your-backend.onrender.com)
+- **Frontend (Vercel)**: [https://lead-management-rpbw.vercel.app](https://lead-management-rpbw.vercel.app)
+- **Backend (Render)**: [https://lead-management-psag.onrender.com](https://lead-management-psag.onrender.com)
 
 ---
 
@@ -108,11 +108,11 @@ npm run dev
 
 ## 🌍 Deployment
 
-### Backend: [Render](https://render.com)
+### Backend: [Render](https://lead-management-psag.onrender.com/)
 - Deploy backend as a Web Service
 - Set environment variables
 
-### Frontend: [Vercel](https://vercel.com)
+### Frontend: [Vercel](https://lead-management-rpbw.vercel.app)
 - Deploy frontend from GitHub repo
 - Update API base URLs accordingly
 
@@ -143,24 +143,9 @@ lead-management-system/
 ## ✍️ Developer
 
 - **Name:** Vinayak Gupta
-- **Role:** MERN Stack Developer Intern
-- **Company:** Ideamagix
+
 
 ---
-
-## 📬 Contact
-
-For any queries or collaboration, reach out at:
-
-📧 vinayak@example.com  
-📞 +91-XXXXXXXXXX
-
----
-
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 ## 📸 Screenshots
