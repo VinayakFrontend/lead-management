@@ -1,0 +1,123 @@
+
+
+/* ===== Container Styling ===== */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #f1f3f4;
+}
+
+.register-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #202124;
+}
+
+/* ===== Inputs and Button ===== */
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a73e8;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.register-form button:hover {
+  background-color: #155ab6;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* ===== Toast Messages ===== */
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 3s ease-in-out;
+  max-width: 90%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.toast-success {
+  background-color: #188038;
+  color: white;
+}
+
+.toast-error {
+  background-color: #d93025;
+  color: white;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .register-form {
+    padding: 20px;
+  }
+
+  .register-form h2 {
+    font-size: 20px;
+  }
+
+  .register-form input,
+  .register-form select,
+  .register-form button {
+    font-size: 13px;
+  }
+}

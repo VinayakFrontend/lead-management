@@ -1,0 +1,112 @@
+/* ===== Container Styling ===== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f1f3f4;
+  padding: 20px;
+}
+
+.login-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #202124;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a73e8;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.login-form button:hover {
+  background-color: #155ab6;
+}
+
+.register-link {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* ===== Toast Message ===== */
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 3s ease-in-out;
+  max-width: 90%;
+  text-align: center;
+}
+
+.toast-error {
+  background-color: #d93025;
+  color: white;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+  .login-form {
+    padding: 20px;
+  }
+
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .login-form input,
+  .login-form button {
+    font-size: 13px;
+  }
+}

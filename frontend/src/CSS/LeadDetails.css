@@ -1,0 +1,96 @@
+/* src/CSS/LeadDetails.css */
+.lead-details {
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.lead-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.lead-details p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.comments-section {
+  margin-top: 1.5rem;
+}
+
+.comments-section h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.comments-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.comments-section li {
+  background: #f1f1f1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.comments-section small {
+  margin-left: 0.5rem;
+  color: #666;
+}
+
+.comments-section input {
+  width: calc(100% - 80px);
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.comments-section button {
+  background-color: #4285F4;
+  border: none;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.comments-section button:hover {
+  background-color: #3367d6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .lead-details {
+    padding: 0.8rem;
+  }
+
+  .comments-section li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comments-section input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .comments-section button {
+    width: 100%;
+  }
+}
